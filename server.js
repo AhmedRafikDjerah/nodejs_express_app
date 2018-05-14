@@ -18,7 +18,7 @@ app.set('view engine', 'hbs');
 
 
 app.use((req, res, next) => {
-    let undeConstruction = false;
+    let undeConstruction = true;
 
     if(!undeConstruction) {
         next();
