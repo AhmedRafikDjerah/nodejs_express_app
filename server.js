@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 hbs.registerHelper('getYear', () => {
@@ -40,6 +42,6 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server started');
 })
